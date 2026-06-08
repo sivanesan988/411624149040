@@ -9,15 +9,29 @@ body{
     font-weight: bolder;
 }
 */
-/*img{
-    height: 500px;
-    width:500px;
+img{
+    height: auto;
+    width:100%;
     border-radius: 500px;
 }
-*/
+/* @media(min-with: 1024px){
+    img{
+        /* height: 500px;              
+        width: 500px;
+    }
+}
+    destop first */
+
+@media(max-with: 600px){
+    img{
+        height: auto;
+        width: 100%;
+    }
+}
+
 video{
     height:500px;
-    width: 500;
+    width: 100%;
 }
 ol{
     list-style-type:lower-roman;
@@ -45,9 +59,51 @@ button{
 }
 nav{
     display: flex;
-    flex-direction: row;
-    gap: 100px;
+    flex-direction: column;
+    /* gap: 100px; */
 }
+/* @media(min-width:1024px){
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap:100px;
+    }
+} */
+@media(max-width:600px){
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap:100px;
+    }
+}
+.grid{
+    display: grid;
+}
+@media(min-with:1024px){
+    .grid{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+#a{
+    grid-row: 1/2;
+}
+#b{
+    grid-row: 1/2;
+}
+#c{
+    grid-row: 1/2;
+}
+#d{
+    grid-row: 2/3;
+}
+#e{
+    grid-row: 2/3;
+}
+#f{
+    grid-row: 2/3;
+}
+
 #p1{
     font-style:normal;
     font-weight: bolder;
